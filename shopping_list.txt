@@ -1,5 +1,6 @@
 eggs x 10
 bananas x 4
 apples x 3
-milk x 2
+onions x 2
 peaches x 5
+oranges x 3
