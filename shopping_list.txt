@@ -1,5 +1,5 @@
 eggs x 10
-bananas x 4
+bananas x 2
 apples x 3
 milk x 2
 peaches x 5
