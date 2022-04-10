@@ -1,0 +1,152 @@
+4. - git clone https://github.com/dariotasev/SI_2022_lab1_173256.git -> preku ovaa komanda go klonirame repozitoriumot lokalno na masina.
+Imeto na lokalniot repozitorium go dobiva imeto kako remote repozitoriumot, odnosno SI_2022_lab1_173256.
+   - cd SI_2022_lab1_173256 -> so ovaa komanda vleguvame vo veke kloniraniot repozitorium.
+
+5. - nano shopping_list.txt -> kreirame txt file, soodvetno preku nano editorot gi vnesuvame 5 proizvodi 
+i go zacuvuvame txt fajlot.
+   - git add shopping_list.txt -> go dodavatame shopping_list.txt fajlot na stagging area,
+   od kade podocna bi mozele da go commit-uvame.
+   - git commit -m "Add 5 items to the shopping list" -> pravime commit na predodno dodaeniot file na stage (shopping_list.txt) so soodvetna poraka.
+   so toa sto ovoj fajl podocna bi mozel da bide prikacen (push-nat) na remote repozitoriumot so negovite promeni.
+
+6. - nano shopping_list.txt -> preku text editorot dodavatame kolicina na sekoj od produktite.
+   - git add shopping_list.txt -> dodavame na stage
+   - git commit -m "Add quantities to the items" -> pravimecommit so soodvetna poraka
+
+7. - git branch branch1 -> kreirame branch od master so ime branch1
+   - git branch branch2 -> kreirame branch od master so ime branch2
+
+8. git log -> ja gledame istoriajta na dosegasni komiti
+commit f450ec5ac373d59a786d861dbb0f61837cc31c78 (HEAD -> master, branch2, branch1)
+Author: dariotasev <kratovomkd@gmail.com>
+Date:   Sun Apr 10 19:45:12 2022 +0200
+
+    Add quantities to the items
+
+commit bdd2a5e800d7795f142bf1726f3b592f9dee4f40
+Author: dariotasev <kratovomkd@gmail.com>
+Date:   Sun Apr 10 13:13:36 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 1e6bfda0c0ef15a4505f581afdad367a01a8e74d (origin/master, origin/HEAD)
+Author: dariotasev <103360599+dariotasev@users.noreply.github.com>
+Date:   Sun Apr 10 12:17:15 2022 +0200
+
+    Update README.md
+
+commit d99cf20c1f1a4ad92fe7f1197c503d745c5ce694
+Author: dariotasev <103360599+dariotasev@users.noreply.github.com>
+Date:   Sun Apr 10 12:16:59 2022 +0200
+
+    Initial commit
+	
+9. - git push origin branch1 -> ja vrzuvame(linkuvame) lokalnata granka so remote granka
+   - git push origin branch2 -> ja vrzuvame(linkuvame) lokalnata granka so remote granka
+
+10. git checkout branch1 -> se prefrlame od master na branch1
+
+11. - nano shopping_list.txt -> go editirame text file-ot preku nano text editorot
+    - git add shopping_list.txt -> go dodavame file-ot na stage
+    - git commit -m "Change quantity of item #5" -> commit-uvame so soodvetna poraka
+
+12. git checkout master -> se prefrlame na grankata master
+
+13. - nano shopping_list.txt -> menuvame kolicina preku nano tekst editorot
+    - git add shopping_list.txt -> go dodavame file-ot na stage
+    - git commit -m "Change quantity of item #2" -> commit-uvame so soodvetna poraka
+
+14. - git push origin branch1 -> pravime push na promenite na branch1 grankata
+    - git push -> bidejki sme na master grankata, povikuvame samo git push koj soodvetno znae na koja granka da go izvrsi
+	push-ot (na remote master).
+
+15. git checkout branch2 -> se prefrlame na branch2
+
+16. - nano shopping_list.txt -> go editirame text file-ot preku nano editorot
+    - git add shopping_list.txt -> go dodavame shopping_list.txt na stage
+    - git commit -m "Modify item #4" -> commit-uvame so soodvetna poraka
+
+17. git log -> gi pregleduva dosegasnite logovi na branch2
+commit 9a6a9aed4068f77bd8c1686f19710664982cb9ee (HEAD -> branch2)
+Author: dariotasev <kratovomkd@gmail.com>
+Date:   Sun Apr 10 20:13:19 2022 +0200
+
+    Modify item #4
+
+commit f450ec5ac373d59a786d861dbb0f61837cc31c78
+Author: dariotasev <kratovomkd@gmail.com>
+Date:   Sun Apr 10 19:45:12 2022 +0200
+
+    Add quantities to the items
+
+commit bdd2a5e800d7795f142bf1726f3b592f9dee4f40
+Author: dariotasev <kratovomkd@gmail.com>
+Date:   Sun Apr 10 13:13:36 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 1e6bfda0c0ef15a4505f581afdad367a01a8e74d
+Author: dariotasev <103360599+dariotasev@users.noreply.github.com>
+Date:   Sun Apr 10 12:17:15 2022 +0200
+
+    Update README.md
+	
+18. - nano shopping_list.txt -> go editirame text file-ot so nano text editorot
+    - git add shopping_list.txt -> go dodavame shopping_list.txt na stage
+    - git commit --amend -m "Modify item #4 and add item #6" -> gi dodavame momentalnite promeni na stage kon posledniot commit.
+Soodvetno se menuva i porakata na commit-ot, odnosno ke ja sodrzi porakata koja e navedena vo ovaa komanda.
+
+19. git log -> gi pokazuva dosegasnite commit-i na branch2
+commit 570c64b06d850a4d64998ae167d467c773d3bd20 (HEAD -> branch2)
+Author: dariotasev <kratovomkd@gmail.com>
+Date:   Sun Apr 10 20:13:19 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit f450ec5ac373d59a786d861dbb0f61837cc31c78
+Author: dariotasev <kratovomkd@gmail.com>
+Date:   Sun Apr 10 19:45:12 2022 +0200
+
+    Add quantities to the items
+
+commit bdd2a5e800d7795f142bf1726f3b592f9dee4f40
+Author: dariotasev <kratovomkd@gmail.com>
+Date:   Sun Apr 10 13:13:36 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 1e6bfda0c0ef15a4505f581afdad367a01a8e74d
+Author: dariotasev <103360599+dariotasev@users.noreply.github.com>
+Date:   Sun Apr 10 12:17:15 2022 +0200
+
+    Update README.md
+
+20. - git checkout master -> se prefrlame na master
+    - git rebase branch1 -> gi prilepuvame promenite od branch1 na master koristejki ja komandata rebase.
+
+21. - git rebase branch2 -> gi prilepuvame promenite od branch2 na master koristejki ja komandata rebase.
+    - nano shopping_list.txt -> bidejki se javuvaat konflikti go koristime nano editorot za manuelno da gi sredime konfliktite
+    - git add shopping_list.txt -> bidejki mu pravivme promeni na shopping_list.txt, sega potrebno e da go dodademe na stage,
+za da mozeme da prodolzime so rebase procesot
+    -  git rebase --continue -> prodolzuvame so rebase procesot, kade sto se otvara editor vo koj e potrebno da ja 
+	update-irame commit porakata.
+	
+22. -git mv C:/Users/BigBen/Desktop/173256.txt 173256.txt -> so ovaa komanda go premestuvame
+tekstualniot file na lokacija kade se naoga nasiot repozitorium lokalno.
+    - git add 173256 -> go dodavame 173126 file-ot na stage
+    - git commit -m "Add docs" -> commit-uvame so soodvetna poraka 
+
+23. - git push -> pravime push na momentalniot branch (master branch-ot).
+    - git push origin branch1 -> pravime push na promenite na branch1 grankata
+    - git push origin branch2 -> pravime push na promenite na branch2 grankata
+
+
+
+
+
+
+
+
+
+
+
